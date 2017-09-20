@@ -46,7 +46,7 @@ class Size implements Comparable<Size> {
     String num = input.trim().toLowerCase();
     String unit = null;
 
-    RegExp parseRegex = new RegExp(r"([0-9\.,]+) *([A-z]+b(ytes?)?|bits?)");
+    RegExp parseRegex = new RegExp(r"([0-9\.,]+) *([A-z]+(b(ytes?))?|bits?)?");
 
     Iterable<Match> matches = parseRegex.allMatches(num);
 
