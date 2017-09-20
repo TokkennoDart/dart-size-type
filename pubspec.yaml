@@ -1,0 +1,7 @@
+name: size_type
+description: Size data type for Dart.
+version: 0.0.1
+#homepage: https://github.com/minerhub/dart-size-type
+
+environment:
+  sdk: '>=1.20.1 <2.0.0'
