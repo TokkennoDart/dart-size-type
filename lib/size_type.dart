@@ -1,6 +1,3 @@
-// Copyright (c) 2017, Minerhub. All rights reserved. Use of this source code
-// is governed by a BSD-style license that can be found in the LICENSE file.
-
 library size_type;
 
 import 'dart:math';
@@ -34,21 +31,35 @@ class Size implements Comparable<Size> {
             .round();
 
   Size.fromKB(double size) : this.Bytes = (size * pow(1024, 1)).round();
+
   Size.fromMB(double size) : this.Bytes = (size * pow(1024, 2)).round();
+
   Size.fromGB(double size) : this.Bytes = (size * pow(1024, 3)).round();
+
   Size.fromTB(double size) : this.Bytes = (size * pow(1024, 4)).round();
+
   Size.fromPB(double size) : this.Bytes = (size * pow(1024, 5)).round();
+
   Size.fromEB(double size) : this.Bytes = (size * pow(1024, 6)).round();
+
   Size.fromZB(double size) : this.Bytes = (size * pow(1024, 7)).round();
+
   Size.fromYB(double size) : this.Bytes = (size * pow(1024, 8)).round();
 
   Size.fromKiB(double size) : this.Bytes = (size * pow(1000, 1)).round();
+
   Size.fromMiB(double size) : this.Bytes = (size * pow(1000, 2)).round();
+
   Size.fromGiB(double size) : this.Bytes = (size * pow(1000, 3)).round();
+
   Size.fromTiB(double size) : this.Bytes = (size * pow(1000, 4)).round();
+
   Size.fromPiB(double size) : this.Bytes = (size * pow(1000, 5)).round();
+
   Size.fromEiB(double size) : this.Bytes = (size * pow(1000, 6)).round();
+
   Size.fromZiB(double size) : this.Bytes = (size * pow(1000, 7)).round();
+
   Size.fromYiB(double size) : this.Bytes = (size * pow(1000, 8)).round();
 
   static parse(String input) {
@@ -182,21 +193,35 @@ class Size implements Comparable<Size> {
   }
 
   double get KB => Bytes / 1024;
+
   double get MB => KB / 1024;
+
   double get GB => MB / 1024;
+
   double get TB => GB / 1024;
+
   double get PB => TB / 1024;
+
   double get EB => PB / 1024;
+
   double get ZB => EB / 1024;
+
   double get YB => ZB / 1024;
 
   double get KiB => Bytes / 1000;
+
   double get MiB => KiB / 1000;
+
   double get GiB => MiB / 1000;
+
   double get TiB => GiB / 1000;
+
   double get PiB => TiB / 1000;
+
   double get EiB => PiB / 1000;
+
   double get ZiB => EiB / 1000;
+
   double get YiB => ZiB / 1000;
 
   int compareTo(Size ct) => this.Bytes.compareTo(ct.Bytes);
@@ -208,8 +233,11 @@ class Size implements Comparable<Size> {
   int get hashCode => this.Bytes;
 
   Size operator +(Size ct) => new Size(this.Bytes + ct.Bytes);
+
   Size operator -(Size ct) => new Size(this.Bytes - ct.Bytes);
+
   Size operator -() => new Size(-this.Bytes);
+
   Size operator *(Size ct) => new Size(this.Bytes * ct.Bytes);
 
   Size operator ~/(Size ct) {
@@ -220,8 +248,11 @@ class Size implements Comparable<Size> {
   }
 
   bool operator <(Size ct) => this.Bytes < ct.Bytes;
+
   bool operator >(Size ct) => this.Bytes > ct.Bytes;
+
   bool operator <=(Size ct) => this.Bytes <= ct.Bytes;
+
   bool operator >=(Size ct) => this.Bytes >= ct.Bytes;
 
   @override
